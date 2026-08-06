@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P8 MARKETING | المنصة الرسمية لوكالة الأداء الرقمي</title>
+    <meta name="description" content="P8 MARKETING: وكالة الأداء الرقمي الفاخرة — هندسة المزيج التسويقي الثماني 8Ps لتحجيم مبيعاتك عبر السوشيال ميديا والإعلانات الممولة، مع لوحة تحكم حية ومحرك ROI تفاعلي.">
+    <link rel="icon" type="image/png" href="../P8_Pure_Monogram_Icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight-navy: #0B132B;
+            --royal-sapphire: #1E3A8A;
+            --imperial-gold: #D4AF37;
+            --soft-platinum: #F3F4F6;
+            --emerald-green: #10B981;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: var(--midnight-navy); color: var(--soft-platinum); overflow-x: hidden; }
+        
+        /* Premium Header */
+        header {
+            display: flex; justify-content: space-between; align-items: center; padding: 25px 8%;
+            background: rgba(11, 19, 43, 0.98); border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(12px);
+        }
+        .brand-logo { font-size: 30px; font-weight: 700; color: var(--imperial-gold); letter-spacing: 1px; }
+        .brand-logo span { color: var(--soft-platinum); font-weight: 400; }
+        .nav-menu { display: flex; list-style: none; gap: 35px; }
+        .nav-menu a { color: var(--soft-platinum); text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .nav-menu a:hover { color: var(--imperial-gold); }
+        .cta-header-btn {
+            background: linear-gradient(135deg, var(--imperial-gold), #FAE49E); color: var(--midnight-navy);
+            padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); transition: 0.3s;
+        }
+        .cta-header-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5); }
+        
+        /* Hero Section */
+        .hero-viewport { padding: 120px 8% 140px 8%; text-align: center; background: radial-gradient(circle at center, rgba(30, 58, 138, 0.35) 0%, transparent 75%); }
+        .hero-viewport h1 { font-size: 52px; line-height: 1.3; margin-bottom: 25px; font-weight: 700; }
+        .hero-viewport h1 span { color: var(--imperial-gold); }
+        .hero-viewport p { font-size: 22px; color: #A0AEC0; max-width: 850px; margin: 0 auto 45px auto; }
+        
+        /* 8Ps Architecture Matrix */
+        .matrix-container { padding: 90px 8%; background: rgba(255, 255, 255, 0.01); }
+        .section-headline { text-align: center; font-size: 40px; margin-bottom: 60px; font-weight: 700; }
+        .section-headline span { color: var(--imperial-gold); }
+        .matrix-grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+        .matrix-item-card { background: rgba(30, 58, 138, 0.12); border: 1px solid rgba(212, 175, 55, 0.12); padding: 35px; border-radius: 14px; transition: 0.4s; position: relative; }
+        .matrix-item-card:hover { transform: translateY(-7px); border-color: rgba(212, 175, 55, 0.45); background: rgba(30, 58, 138, 0.22); }
+        .matrix-index { font-size: 45px; font-weight: 700; color: rgba(212, 175, 55, 0.12); position: absolute; top: 15px; left: 25px; }
+        .matrix-item-card h3 { font-size: 24px; color: var(--imperial-gold); margin-bottom: 15px; font-weight: 700; }
+        .matrix-item-card p { color: #CBD5E0; font-size: 16px; line-height: 1.7; margin-bottom: 20px; }
+        .social-channel-tag { display: inline-block; background: rgba(212, 175, 55, 0.15); color: #FAE49E; padding: 5px 14px; border-radius: 25px; font-size: 14px; font-weight: 600; }
+        
+        /* ROI Interactive Engine */
+        .engine-viewport { padding: 90px 8%; text-align: center; }
+        .engine-card { max-width: 650px; margin: 0 auto; background: rgba(30, 58, 138, 0.18); border: 1px solid rgba(212, 175, 55, 0.25); padding: 45px; border-radius: 16px; }
+        .input-wrapper { margin-bottom: 30px; text-align: right; }
+        .input-wrapper label { display: block; margin-bottom: 12px; color: #FAE49E; font-weight: 600; }
+        .input-wrapper input { width: 100%; padding: 14px; background: #060B18; border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 8px; color: #fff; text-align: center; font-size: 18px; }
+        .engine-trigger-btn { background: var(--royal-sapphire); color: white; border: none; padding: 15px 35px; font-size: 20px; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; transition: 0.3s; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4); }
+        .engine-trigger-btn:hover { background: #2563EB; transform: translateY(-1px); }
+        .engine-output-panel { margin-top: 35px; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald-green); border-radius: 8px; font-size: 26px; font-weight: 700; color: var(--emerald-green); display: none; }
+        
+        footer { padding: 50px 8%; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.15); color: #718096; font-size: 15px; }
+        @media(max-width: 900px) { .nav-menu { display: none; } .hero-viewport h1 { font-size: 36px; } .section-headline { font-size: 30px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-logo">P8 <span>MARKETING</span></div>
+        <ul class="nav-menu">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#matrix">مصفوفة الـ 8Ps</a></li>
+            <li><a href="#roi-engine">محرك الـ ROI</a></li>
+        </ul>
+        <a href="#roi-engine" class="cta-header-btn">إطلاق الإستراتيجية الشاملة</a>
+    </header>
+
+    <section class="hero-viewport" id="hero">
+        <h1>تحجيم الأداء الرقمي عبر <span>معيار P8 الصارم</span></h1>
+        <p>ندمج المنتجات الفاخرة وشبكات التواصل الاجتماعي والتحليل الإحصائي ضمن خطة عمل موحدة ترتكز هندسياً على المزيج التسويقي الثماني المتكامل للوصول للحد الأقصى.</p>
+    </section>
+
+    <section class="matrix-container" id="matrix">
+        <h2 class="section-headline">المحور التشغيلي: <span>هندسة الـ 8Ps</span></h2>
+        <div class="matrix-grid-layout">
+            <div class="matrix-item-card">
+                <div class="matrix-index">01</div>
+                <h3>1. المنتج (Product)</h3>
+                <p>صياغة البنية البصرية للمنتجات الرقمية والـ Merchandise الخاصة بك لتظهر بأعلى درجات الجاذبية والموثوقية.</p>
+                <div class="social-channel-tag">كتالوج الإنستغرام الفاخر وفيس بوك</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">02</div>
+                <h3>2. السعر (Price)</h3>
+                <p>تطوير هياكل تسعير رقمية ديناميكية وباقات اشتراكات متكاملة تحفز الشراء الفوري وترفع القيمة الحجمية للطلب.</p>
+                <div class="social-channel-tag">استراتيجيات العروض الموجهة للشركات</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">03</div>
+                <h3>3. القنوات والمواقع (Place)</h3>
+                <p>أتمتة وتجهيز المتاجر الداخلية لوسائل التواصل الاجتماعي لتقليص خطوات الشراء المباشر للعملاء المستهدفين.</p>
+                <div class="social-channel-tag">إعداد متاجر TikTok Shop & Instagram</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">04</div>
+                <h3>4. الترويج الذكي (Promotion)</h3>
+                <p>ضخ الحملات الإعلانية الممولة المعتمدة على أنظمة الاستهداف الدقيقة المعتمدة على سلوك واهتمام الجمهور الساخن.</p>
+                <div class="social-channel-tag">حملات إعلانات Meta Ads & Google Ads</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">05</div>
+                <h3>5. الجمهور والمجتمع (People)</h3>
+                <p>بناء وهندسة أنظمة المحادثة الآلية الذكية لضمان تفاعل دائم مع العملاء على مدار الساعة وتحويل المتابعين إلى مشترين.</p>
+                <div class="social-channel-tag">أتمتة الرسائل المباشرة DM Automation</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">06</div>
+                <h3>6. المسارات المؤتمتة (Process)</h3>
+                <p>تخطيط مسارات البيع الـ Funnels المتقدمة التي تنطلق من السوشيال ميديا وتمر بالاقناع وتنتهي بوابات الدفع تلقائياً.</p>
+                <div class="social-channel-tag">هندسة قنوات البيع الذكية الـ Funnels</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">07</div>
+                <h3>7. المظهر والأدلة (Physical Evidence)</h3>
+                <p>إبراز الهوية الفاخرة والأدلة الحية من أرقام أرباح واقعية، آراء العملاء الموثقة، والمطبوعات الإدارية المتميزة لبناء الثقة المطلقة.</p>
+                <div class="social-channel-tag">بروفايل الشركة والأدلة البصرية الحية</div>
+            </div>
+            <div class="matrix-item-card">
+                <div class="matrix-index">08</div>
+                <h3>8. قياس الأداء والإنتاجية (Performance)</h3>
+                <p>التحليل المستمر والدقيق لأداء الإعلانات وحجم التدفق المالي لضمان تقليص تكلفة الاستحواذ ومضاعفة الأرباح الصافية للوكالة.</p>
+                <div class="social-channel-tag">لوحة تحكم حية لأداء حملات العميل 24/7</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="engine-viewport" id="roi-engine">
+        <h2 class="section-headline">محرك تحليل البيانات وعوائد <span>P8 MAX</span></h2>
+        <div class="engine-card">
+            <div class="input-wrapper">
+                <label for="ad-budget">الميزانية الإعلانية الإجمالية المقترحة ($)</label>
+                <input type="number" id="ad-budget" value="2500" placeholder="2500" title="الميزانية الإعلانية الإجمالية المقترحة بالدولار">
+            </div>
+            <div class="input-wrapper">
+                <label for="ad-conversion">معدل التحويل المتوقع لتطبيق الاستراتيجية الثمانية (%)</label>
+                <input type="number" id="ad-conversion" value="4.2" step="0.1" placeholder="4.2" title="نسبة التحويل المتوقعة بالتقدير المئوي">
+            </div>
+            <button class="engine-trigger-btn" onclick="runROIEngine()">حساب العائد المتوقع للحد الأقصى (Calculate MAX ROI)</button>
+            <div class="engine-output-panel" id="roi-output"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لوكالة P8 MARKETING — قوة المزيج الثماني للحد الأقصى.</p>
+    </footer>
+
+    <script>
+        function runROIEngine() {
+            const budget = parseFloat(document.getElementById('ad-budget').value);
+            const conversion = parseFloat(document.getElementById('ad-conversion').value);
+            const panel = document.getElementById('roi-output');
+            if (budget > 0 && conversion > 0) {
+                const expectedReturn = budget * (conversion * 1.5);
+                panel.style.display = 'block';
+                panel.innerHTML = 'المبيعات الإجمالية المتوقعة للحد الأقصى: ' + expectedReturn.toFixed(2) + ' $';
+            } else {
+                panel.style.display = 'block';
+                panel.innerHTML = 'يرجى إدخال ميزانية ومعدل تحويل صحيحين.';
+            }
+        }
+    </script>
+</body>
+</html>
