@@ -53,6 +53,5 @@ ax.set_ylim(1.4, 4.3)
 
 # 6. تصدير وحفظ الأيقونة بأعلى دقة متجهة بدون حواف ميتة للاستخدام المباشر
 plt.savefig('P8_Pure_Gold_Icon.png', dpi=400, bbox_inches='tight', pad_inches=0.1, facecolor=fig.get_facecolor(), edgecolor='none')
-plt.show()
 
 print("تم بنجاح تصدير وحفظ أيقونة P8 الصافية بدقة فائقة باسم: P8_Pure_Gold_Icon.png")
