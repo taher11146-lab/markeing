@@ -10,20 +10,11 @@
       <stop offset="100%" stop-color="#0B132B"/>
     </linearGradient>
   </defs>
-
-  <!-- أيقونة السهم وحرف P المتجه للأعلى -->
+  <!-- P8 mark only (arrow-P + gold 8) — for favicon/headers -->
   <path d="M 140 280 L 140 120 L 120 140 M 140 120 L 160 140"
         fill="none" stroke="url(#blueGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- القوس المنحني المكمل لحرف P -->
   <path d="M 140 120 A 46 46 0 0 1 186 166 A 46 46 0 0 1 140 212"
         fill="none" stroke="url(#blueGradient)" stroke-width="24" stroke-linecap="round"/>
-  <!-- الرقم 8 -->
   <circle cx="235" cy="166" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="24"/>
   <circle cx="235" cy="256" r="56" fill="none" stroke="url(#goldGradient)" stroke-width="24"/>
-
-  <!-- التايبوغرافي -->
-  <text x="200" y="375" fill="#0B132B" font-size="58" font-weight="900" text-anchor="middle"
-        font-family="'Segoe UI', Helvetica, sans-serif" letter-spacing="2">PER8</text>
-  <text x="200" y="405" fill="#718096" font-size="10.5" font-weight="700" letter-spacing="5" text-anchor="middle"
-        font-family="'Segoe UI', Helvetica, sans-serif">DIGITAL PERFORMANCE AGENCY</text>
 </svg>
