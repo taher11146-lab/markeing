@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PER8 Logo - JavaScript SVG Edition</title>
+    <style>
+        body {
+            background-color: #050C1A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .logo-container {
+            width: 450px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo-container" id="per8-logo"></div>
+
+<script>
+    // 1. دالة توليد الشعار وبناء عناصر الـ SVG ديناميكياً باستخدام الجافا سكريبت
+    function createPER8Logo(containerId) {
+        const container = document.getElementById(containerId);
+        const NS = "http://www.w3.org/2000/svg";
+
+        // إنشاء عنصر الـ SVG الرئيسي وأبعاده الهندسية
+        const svg = document.createElementNS(NS, "svg");
+        svg.setAttribute("viewBox", "0 0 400 450");
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+
+        // 2. بناء التدرج اللوني الذهبي الكرومي المعدني (Chrome Gold Gradient)
+        const defs = document.createElementNS(NS, "defs");
+        const gradient = document.createElementNS(NS, "linearGradient");
+        gradient.setAttribute("id", "chromeGold");
+        gradient.setAttribute("x1", "0%");
+        gradient.setAttribute("y1", "0%");
+        gradient.setAttribute("x2", "100%");
+        gradient.setAttribute("y2", "100%");
+
+        // مصفوفة محاكاة انعكاس بريق الذهب الخالص
+        const goldStops = [
+            { offset: "0%", color: "#735613" },
+            { offset: "20%", color: "#D4AF37" },
+            { offset: "40%", color: "#FFF3B3" },
+            { offset: "60%", color: "#D4AF37" },
+            { offset: "80%", color: "#9E781D" },
+            { offset: "90%", color: "#FFF3B3" },
+            { offset: "100%", color: "#543F0C" }
+        ];
+
+        goldStops.forEach(stopData => {
+            const stop = document.createElementNS(NS, "stop");
+            stop.setAttribute("offset", stopData.offset);
+            stop.setAttribute("stop-color", stopData.color);
+            gradient.appendChild(stop);
+        });
+        defs.appendChild(gradient);
+        svg.appendChild(defs);
+
+        // 3. رسم مونوغرام الـ P8 باستخدام الخطوط الرياضية السميكة السمات
+        const strokeWidth = "22";
+
+        // الدائرة العلوية للرقم 8
+        const topCircle = document.createElementNS(NS, "circle");
+        topCircle.setAttribute("cx", "250");
+        topCircle.setAttribute("cy", "140");
+        topCircle.setAttribute("r", "50");
+        topCircle.setAttribute("fill", "none");
+        topCircle.setAttribute("stroke", "url(#chromeGold)");
+        topCircle.setAttribute("stroke-width", strokeWidth);
+        svg.appendChild(topCircle);
+
+        // الدائرة السفلية للرقم 8
+        const bottomCircle = document.createElementNS(NS, "circle");
+        bottomCircle.setAttribute("cx", "250");
+        bottomCircle.setAttribute("cy", "240");
+        bottomCircle.setAttribute("r", "62");
+        bottomCircle.setAttribute("fill", "none");
+        bottomCircle.setAttribute("stroke", "url(#chromeGold)");
+        bottomCircle.setAttribute("stroke-width", strokeWidth);
+        svg.appendChild(bottomCircle);
+
+        // العمود الرأسي الأساسي لحرف P (Stem)
+        const pStem = document.createElementNS(NS, "line");
+        pStem.setAttribute("x1", "150");
+        pStem.setAttribute("y1", "90");
+        pStem.setAttribute("x2", "150");
+        pStem.setAttribute("y2", "290");
+        pStem.setAttribute("stroke", "url(#chromeGold)");
+        pStem.setAttribute("stroke-width", strokeWidth);
+        pStem.setAttribute("stroke-linecap", "round");
+        svg.appendChild(pStem);
+
+        // القوس الجانبي المكمل لحرف P المتداخل مع الـ 8
+        const pArc = document.createElementNS(NS, "path");
+        pArc.setAttribute("d", "M 150 90 A 50 50 0 0 1 200 140 A 50 50 0 0 1 150 190");
+        pArc.setAttribute("fill", "none");
+        pArc.setAttribute("stroke", "url(#chromeGold)");
+        pArc.setAttribute("stroke-width", strokeWidth);
+        pArc.setAttribute("stroke-linecap", "round");
+        svg.appendChild(pArc);
+
+        // 4. طباعة التايبوغرافي الفخم لاسم الوكالة ونطاق العمل بالأسفل
+        // النص الأساسي: PER8
+        const mainText = document.createElementNS(NS, "text");
+        mainText.setAttribute("x", "200");
+        mainText.setAttribute("y", "375");
+        mainText.setAttribute("fill", "#D4AF37");
+        mainText.setAttribute("font-size", "52");
+        mainText.setAttribute("font-weight", "bold");
+        mainText.setAttribute("text-anchor", "middle");
+        mainText.textContent = "PER8";
+        svg.appendChild(mainText);
+
+        // النص الفرعي: DIGITAL PERFORMANCE AGENCY
+        const subText = document.createElementNS(NS, "text");
+        subText.setAttribute("x", "200");
+        subText.setAttribute("y", "410");
+        subText.setAttribute("fill", "#A0AEC0");
+        subText.setAttribute("font-size", "10");
+        subText.setAttribute("font-weight", "600");
+        subText.setAttribute("letter-spacing", "5");
+        subText.setAttribute("text-anchor", "middle");
+        subText.textContent = "DIGITAL PERFORMANCE AGENCY";
+        svg.appendChild(subText);
+
+        // حقن الـ SVG المولد بالكامل داخل حاوية الصفحة
+        container.appendChild(svg);
+    }
+
+    // تشغيل الدالة فور تحميل الصفحة لإظهار الشعار
+    createPER8Logo("per8-logo");
+</script>
+
+</body>
+</html>
