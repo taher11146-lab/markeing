@@ -92,6 +92,14 @@
         .service .ic{font-size:24px; margin-bottom:14px; filter:grayscale(1) brightness(2);}
         .service h3{color:#fff; font-size:17px; margin-bottom:8px;}
         .service p{color:var(--liquid); font-size:13px; line-height:1.9;}
+        .offer-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; color:#8C6F23; background:linear-gradient(90deg,#D4AF37,#FAE49E); padding:5px 14px; border-radius:20px; margin-bottom:12px;}
+        .offer-price{font-size:20px; font-weight:700; color:#FAE49E; margin:14px 0 4px;}
+        .offer-price small{font-size:12px; color:#94A3B8; font-weight:400;}
+        .offer-list{margin:12px 0 0; padding:0; list-style:none;}
+        .offer-list li{color:var(--liquid); font-size:13px; line-height:2.1; padding-right:18px; position:relative;}
+        .offer-list li::before{content:"✦"; position:absolute; right:0; color:#D4AF37; font-size:10px; top:2px;}
+        .offer-cta{display:inline-block; margin-top:18px; background:linear-gradient(90deg,#e2e8f0,#94a3b8); color:var(--midnight); font-weight:700; padding:12px 26px; border-radius:6px; font-size:13px; text-decoration:none;}
+        .offer-cta.ghost{background:transparent; border:1px solid rgba(148,163,184,.35); color:#fff;}
 
         /* about */
         .about{background:rgba(28,37,65,.18); border-block:1px solid rgba(148,163,184,.12); padding:96px 0;}
@@ -147,6 +155,7 @@
                     <li><a href="#perspective">المنظور</a></li>
                     <li><a href="#framework">مصفوفة 8Ps</a></li>
                     <li><a href="#services">الخدمات والمنتجات</a></li>
+                    <li><a href="#offers">العروض</a></li>
                     <li><a href="#about">من نحن</a></li>
                 </ul>
             </nav>
@@ -263,7 +272,58 @@
         </div>
     </section>
 
-    <!-- 5. من نحن -->
+    <!-- 5. سلم العروض -->
+    <section id="offers" class="services">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="classic-title silver-gradient">سلم العروض الثلاثة</h2>
+                <p>ابدأ بالفحص المجاني — ثم تقرر بنفسك، بلا التزام ولا ضغط ولا رسوم مخفية.</p>
+            </div>
+            <div class="service-grid">
+                <div class="service">
+                    <div class="offer-tag">الدخول</div>
+                    <h3>الفحص المجاني</h3>
+                    <p>تدقيق كامل للأبعاد الثمانية لمتجرك: ماذا يبيع، أين يلتحم، وأين يحرق المال.</p>
+                    <div class="offer-price">0 ر.س <small>— خلال 48 ساعة</small></div>
+                    <ul class="offer-list">
+                        <li>تدقيق 8Ps كامل لمتجرك</li>
+                        <li>تقرير واتساب مباشر بالثغرات</li>
+                        <li>أول 3 خطوات إصلاح فورية</li>
+                        <li>لا بطاقة، لا التزام</li>
+                    </ul>
+                    <a class="offer-cta ghost" href="https://wa.me/966553286331?text=أريد%20الفحص%20المجاني%20للأبعاد%20الثمانية" target="_blank" rel="noopener">احجز فحصك المجاني</a>
+                </div>
+                <div class="service">
+                    <div class="offer-tag">الوسط — الأكثر طلباً</div>
+                    <h3>ركيزة النمو</h3>
+                    <p>التركيز على الركيزة الأضعف في متجرك (إعلانات، تحويل، أو أتمتة) وتشغيلها حتى الثبات.</p>
+                    <div class="offer-price">من 1,490 ر.س <small>/ شهرياً</small></div>
+                    <ul class="offer-list">
+                        <li>ركيزة واحدة تُدار بالكامل</li>
+                        <li>لوحة أداء حية أسبوعية</li>
+                        <li>تقرير إثبات بالأرقام</li>
+                        <li>إيقاف الخدمة بأي وقت</li>
+                    </ul>
+                    <a class="offer-cta" href="https://wa.me/966553286331?text=أريد%20ركيزة%20النمو" target="_blank" rel="noopener">ابدأ ركيزة النمو</a>
+                </div>
+                <div class="service">
+                    <div class="offer-tag">القمة</div>
+                    <h3>منظومة الثمانية</h3>
+                    <p>كل المحركات الثمانية تعمل لصالح علامتك — من المنظور إلى الإثبات، كمنظومة واحدة لا تتوقف.</p>
+                    <div class="offer-price">من 7,900 ر.س <small>/ شهرياً</small></div>
+                    <ul class="offer-list">
+                        <li>الثمانية محركات كاملة</li>
+                        <li>فريق تنفيذ مخصص</li>
+                        <li>مسرح حالة ضمان الأداء</li>
+                        <li>اجتماع قيادة أسبوعي</li>
+                    </ul>
+                    <a class="offer-cta" href="https://wa.me/966553286331?text=أريد%20منظومة%20الثمانية%20الكاملة" target="_blank" rel="noopener">احجز منظومة الثمانية</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. من نحن -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-grid">
