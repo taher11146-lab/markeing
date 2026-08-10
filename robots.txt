@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taher11146-lab.github.io/markeing/sitemap.xml

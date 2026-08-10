@@ -15,13 +15,14 @@
     <meta name="twitter:title" content="P8 MARKETING | لمتجارك جهاز بيع يعمل 24/7">
     <meta name="twitter:description" content="فحص مجاني للأبعاد الثمانية خلال 48 ساعة — ونثبت كل ريال.">
     <meta name="twitter:image" content="https://taher11146-lab.github.io/markeing/PER8/og-image.png">
+    <link rel="canonical" href="https://taher11146-lab.github.io/markeing/P8_MARKETING/">
     <link rel="icon" type="image/svg+xml" href="../PER8/logo-mark.svg">
     <link rel="icon" type="image/png" sizes="16x16" href="../PER8/logo-mark_16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../PER8/logo-mark_32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="../PER8/logo-mark_48.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../PER8/logo-mark_96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../PER8/logo-mark_180.png">
-    <link rel="manifest" href="../PER8/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -162,8 +163,8 @@
         <h2 class="section-headline">محرك تحليل البيانات وعوائد <span>P8 MAX</span></h2>
         <div class="engine-card">
             <div class="input-wrapper">
-                <label for="ad-budget">الميزانية الإعلانية الإجمالية المقترحة ($)</label>
-                <input type="number" id="ad-budget" value="2500" placeholder="2500" title="الميزانية الإعلانية الإجمالية المقترحة بالدولار">
+                <label for="ad-budget">الميزانية الإعلانية الإجمالية المقترحة (ر.س)</label>
+                <input type="number" id="ad-budget" value="2500" placeholder="2500" title="الميزانية الإعلانية الإجمالية المقترحة بالريال السعودي">
             </div>
             <div class="input-wrapper">
                 <label for="ad-conversion">معدل التحويل المتوقع لتطبيق الاستراتيجية الثمانية (%)</label>
@@ -195,7 +196,7 @@
             if (budget > 0 && conversion > 0) {
                 const expectedReturn = budget * (conversion * 1.5);
                 panel.style.display = 'block';
-                panel.innerHTML = 'المبيعات المتوقعة للأقصى: ' + expectedReturn.toFixed(2) + ' $ — كل ريال محسوب بالخوارزمية.';
+                panel.innerHTML = 'المبيعات المتوقعة للأقصى: ' + expectedReturn.toFixed(2) + ' ر.س — كل ريال محسوب بالخوارزمية.';
             } else {
                 panel.style.display = 'block';
                 panel.innerHTML = 'يرجى إدخال ميزانية ومعدل تحويل صحيحين.';
